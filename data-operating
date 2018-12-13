@@ -1,1 +1,31 @@
 
+# 三、数据操作
+     #1. 常用数据类型
+        类型	  说明
+        int  	  整型
+        double	浮点型
+        varvhar	字符串型
+        date	  日期，格式为yyyy-mm-dd
+        
+    # 2. 添加行数据
+        insert into info 表名 values(值列表) [ ,(值列表) ];
+        insert into info values('1', 'liushall', 'boy', '2000-1-1');
+        insert into info values('1', 'liushall', 'boy', '2000-1-1'), ('2', 'zhangsan', 'boy', '2001-12-12');
+
+        给部分字段添加数据 ： insert into 表名(字段列表) values(值列表) [ ,(值列表) ];
+        insert into info(ID, name) values('3', 'lisi');
+        
+    # 3. 查询数据
+        查看全部字段信息 ： select * from 表名 [ where 条件 ];
+        select * from info;
+        
+        查看部分字段信息 ： select 字段名称[ ，字段名称 ] from 表名 [ where 条件 ];
+        select ID, name, sex from info where id != 3;
+        
+    # 4. 更新数据
+        update 表名 set 字段 = 修改后的值 [where 条件];
+        update info set sex = 'girl' where name = 'lisi';
+
+    # 5. 删除数据
+        delete from 表名 [ where 条件 ];
+        delete from info where name = 'lisi';
